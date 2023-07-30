@@ -1,8 +1,16 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
 	background: #f9f9f9;
 	font-family: "Roboto", sans-serif;
+	line-height: 1;
+    position: relative;
 }
 
 .main-content {
@@ -45,6 +53,172 @@ body {
 .user-info {
 	display: flex;
 	align-items: center;
+}
+.pop-up {
+    width: 40rem !important;
+    height: 20rem !important;
+    background-color: #343a40;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    transition: .3s all ease;
+    opacity: 0;
+    overflow: hidden !important;
+    z-index: -99;
+}
+
+.pop-show {
+    opacity: 100% !important;
+    width: 50rem ;
+    height: 40rem;
+    z-index: 9;
+    box-shadow: 2px 2px 6px 1px #22262a;
+}
+
+.pop-up-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.post-form {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.post-form::-webkit-scrollbar {
+    display: none;
+}
+
+.pop-up-head {
+    position: absolute;
+    top: 0;
+	left: 0;
+    background-color: #343a40;
+    height: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 4rem;
+}
+
+
+.pop-up-cancel {
+    font-size: 0.8rem !important;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: #f8f9fa;
+    background-color: #868e96;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s all ease;
+}
+
+.pop-up-cancel:hover {
+    opacity: 60%;
+}
+
+.pop-up-body {
+    width: 100%;
+    gap: 4rem;
+    padding: 8rem 5rem;
+}
+
+
+.post-field {
+    width: 100%;
+}
+
+.post-field label {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+    text-transform: capitalize;
+}
+
+.post-text {
+    width: 90%;
+    height: 16rem;
+    border-radius: 1.2rem;
+    border: 2px solid transparent;
+    outline: none;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #f8f9fa;
+    letter-spacing: 1px;
+    background-color: #495057;
+    padding: 2rem 3rem;
+    display: block;
+    transition: .3s all ease;
+}
+.post-user{
+    width: 90%;
+    height: 1rem;
+    border-radius: 1.2rem;
+    border: 2px solid transparent;
+    outline: none;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #f8f9fa ;
+    letter-spacing: 1px;
+    background-color: #495057;
+    padding: 2rem 3rem;
+    display: block;
+    transition: .3s all ease;
+    margin-bottom: 12px;
+}
+
+.post-text::placeholder {
+    color: #adb5bd;
+}
+
+.post-text:focus,
+.post-text:hover {
+    border-color: #339af0;
+}
+.post-user::placeholder {
+    color: #adb5bd;
+}
+
+.post-user:focus,
+.post-user:hover {
+    border-color: #339af0;
+}
+
+.post-text::-webkit-scrollbar {
+    display: none;
+}
+
+
+.pop-up-bottom {
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: #343a40;
+    width: 100%;
+    height: 7rem;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pop-icons {
+    gap: 3rem;
+}
+
+.pop-icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
 }
 
 
