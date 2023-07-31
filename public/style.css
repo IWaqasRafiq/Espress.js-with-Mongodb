@@ -11,11 +11,16 @@ body {
 	font-family: "Roboto", sans-serif;
 	line-height: 1;
     position: relative;
+    padding: 12px;
 }
 
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .main-content {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 2rem;
 }
 
 .table {
@@ -54,9 +59,14 @@ body {
 	display: flex;
 	align-items: center;
 }
+
+
+/* ------------------------------------pop-up-css--------------------------------------- */
+
+
 .pop-up {
-    width: 40rem !important;
-    height: 20rem !important;
+    width: 60rem;
+    height: 40rem;
     background-color: #343a40;
     position: fixed;
     top: 50%; left: 50%;
@@ -64,14 +74,14 @@ body {
     border-radius: 1.5rem;
     transition: .3s all ease;
     opacity: 0;
-    overflow: hidden !important;
+    overflow: hidden;
     z-index: -99;
 }
 
 .pop-show {
     opacity: 100% !important;
-    width: 50rem ;
-    height: 40rem;
+    width: 40rem;
+    height: 30rem;
     z-index: 9;
     box-shadow: 2px 2px 6px 1px #22262a;
 }
@@ -94,10 +104,8 @@ body {
 
 .pop-up-head {
     position: absolute;
-    top: 0;
-	left: 0;
+    top: 0; left: 0;
     background-color: #343a40;
-    height: 1rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -105,9 +113,15 @@ body {
     padding: 1rem 4rem;
 }
 
+.pop-up-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+}
 
 .pop-up-cancel {
-    font-size: 0.8rem !important;
+    font-size: 1.9rem;
     font-weight: 500;
     padding: 2px 7px;
     border-radius: 50%;
@@ -126,7 +140,7 @@ body {
 
 .pop-up-body {
     width: 100%;
-    gap: 4rem;
+    gap: 2rem;
     padding: 8rem 5rem;
 }
 
@@ -134,7 +148,6 @@ body {
 .post-field {
     width: 100%;
 }
-
 .post-field label {
     display: block;
     font-size: 1.7rem;
@@ -204,11 +217,11 @@ body {
     bottom: 0; left: 0;
     background-color: #343a40;
     width: 100%;
-    height: 7rem;
-    padding: 0 4rem;
+    height: 5rem;
+    padding: 0 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .pop-icons {
@@ -220,6 +233,45 @@ body {
     height: 2rem;
     cursor: pointer;
 }
+
+.post {
+    padding: .7rem 1rem;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    background-color: #246ca8;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .3s all ease;
+}
+.product{
+    padding: .7rem 2rem;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    background-color: #246ca8;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+
+.post:hover {
+    opacity: 60%;
+}
+
+.flex {
+    display: flex;
+}
+
+
+
 
 
 
