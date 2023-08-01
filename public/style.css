@@ -269,3 +269,42 @@ h1{
 .flex {
     display: flex;
 }
+
+
+
+
+.post {
+    padding: .7rem 1rem;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    background-color: #246ca8;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .3s all ease;
+}
+.product{
+    padding: .7rem 2rem;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    background-color: #246ca8;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+
+.post:hover {
+    opacity: 60%;
+}
+
+.flex {
+    display: flex;
+}
