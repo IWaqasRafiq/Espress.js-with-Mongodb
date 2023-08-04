@@ -112,3 +112,9 @@ window.savePost = (postId) => {
         })
 
 }
+let postW = document.getElementsByClassName('pop-up')[0];
+
+function post(e) {
+    e.classList.toggle('pop-show');
+    main.classList.toggle('main-block');
+  }
