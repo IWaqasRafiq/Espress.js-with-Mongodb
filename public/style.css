@@ -308,3 +308,7 @@ h1{
 .flex {
     display: flex;
 }
+.dropdown-item button{
+    outline: none;
+    border: none;
+}

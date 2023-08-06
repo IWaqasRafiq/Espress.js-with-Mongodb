@@ -66,9 +66,8 @@
                                     <i class="fa fa-ellipsis-v"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="triggerId1">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
-                                    <a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i>
-                                        Delete</a>
+                                    <a class="dropdown-item" href="#" ><i class="fa fa-pencil mr-1"><button onclick="editPost('${eachPost._id}','${eachPost.title}','${eachPost.text}', )"></button></i> Edit</a>
+                                    <a class="dropdown-item text-danger"  href="#"><i class="fa fa-trash mr-1"><button onclick="delPost('${eachPost._id}')"></button></i>Delete</a>
                                 </div>
                             </div>
                         </td>
@@ -80,7 +79,7 @@
     </section>
     <div class="pop-up">
         <div class="pop-up-container">
-            <form action="#" class="post-form" id="post-form" onsubmit="event.preventDefault();">
+            <form class="post-form" onsubmit="createPost();  return false">
                 <div class="pop-up-head">
                     <button class="pop-up-cancel" onclick="post(postW)" type="reset"
                         title="Cancel Post">&times;</button>
@@ -88,19 +87,19 @@
                 <div class="pop-up-body flex">
                     <div class="post-field">
                         <label for="caption">Product Detail</label>
-                        <input type="text" maxlength="20" placeholder="Product Name" id="post-user" class="post-user">
-                        <input type="text" maxlength="10" placeholder="Product Price" id="post-user" class="post-user">
-                        <textarea name="caption" id="caption" class="post-text" placeholder="Product Description"
+                        <input type="text" maxlength="20" placeholder="Product Name" id="postTitle" class="post-user">
+                        <input type="text" maxlength="10" placeholder="Product Price" id="postText" class="post-user">
+                        <textarea name="caption" id="postDescription" class="post-text" placeholder="Product Description"
                             maxlength="50" spellcheck="false"></textarea>
                     </div>
                 </div>
                 <div class="pop-up-bottom">
-                    <button class="post" type="submit" onclick="posted(); post(postW);">post</button>
+                    <button class="post" id="postSubmit" type="submit">post</button>
                 </div>
             </form>
         </div>
     </div>
-    <form onsubmit="createPost(); return false">
+    <!-- <form onsubmit="createPost(); return false">
         <label for="postTitle">title:</label>
         <input type="text" name="postTitle" id="postTitle" placeholder="enter your city name">
 
@@ -115,7 +114,7 @@
         <br>
         <br>
         <br>
-    </form>
+    </form> -->
 
     <div id="result"></div>
     <br>
@@ -128,9 +127,9 @@
     <script src="./script.js"></script>
     <script type="script" src="../server.mjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 </body>
 
