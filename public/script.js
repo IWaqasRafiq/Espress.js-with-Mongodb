@@ -41,7 +41,7 @@ window.getAllPost = function () {
             let postsHtml = ``
 
             response.data.map((eachPost) => {
-                postsHtml =
+                postsHtml +=
                     // `<div id='card-${eachPost._id}' class="post-card">
                     //     <h3>${eachPost.title}</h3>
                     //     <p> ${eachPost.text} </p>
