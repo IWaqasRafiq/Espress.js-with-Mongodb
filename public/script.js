@@ -49,32 +49,33 @@ window.getAllPost = function () {
                     //     <button onclick="editPost('${eachPost._id}','${eachPost.title}','${eachPost.text}', )">Edit</button>
                     // </div> 
                     // <br />`
-                    `<tbody id='card-${eachPost._id}' class="post-card">
-                    <tr>
-                        <td>
-                            <div class="user-info">
-                                <div class="user-info__basic">
-                                    <h5 class="mb-0">${eachPost.title}</h5>
-                                </div>
-                            </div>
-                        </td>
-                        <td>${eachPost.text}</td>
-                        <td>${eachPost.description}</td>
-                        <td>
-                            <div class="dropdown open">
-                                <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i class="fa fa-ellipsis-v"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="triggerId1">
-                                <a class="dropdown-item" href="#" ><i class="fa fa-pencil mr-1"><button onclick="editPost('${eachPost._id}','${eachPost.title}','${eachPost.text}','${eachPost.description}' )"></button></i> Edit</a>
-                                <a class="dropdown-item text-danger"  href="#"><i class="fa fa-trash mr-1"><button onclick="delPost('${eachPost._id}')"></button></i>Delete</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                    `\
+                    <tbody id='card-${eachPost._id}' class="post-card">\
+                    <tr>\
+                        <td>\
+                            <div class="user-info">\
+                                <div class="user-info__basic">\
+                                    <h5 class="mb-0">${eachPost.title}</h5>\
+                                </div>\
+                            </div>\
+                        </td>\
+                        <td>${eachPost.text}</td>\
+                        <td>${eachPost.description}</td>\
+                        <td>\
+                            <div class="dropdown open">\
+                                <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"\
+                                    aria-expanded="false">\
+                                    <i class="fa fa-ellipsis-v"></i>\
+                                </a>\
+                                <div class="dropdown-menu" aria-labelledby="triggerId1">\
+                                <a class="dropdown-item" href="#" ><i class="fa fa-pencil mr-1"><button onclick="editPost('${eachPost._id}','${eachPost.title}','${eachPost.text}','${eachPost.description}' )"></button></i> Edit</a>\
+                                <a class="dropdown-item text-danger"  href="#"><i class="fa fa-trash mr-1"><button onclick="delPost('${eachPost._id}')"></button></i>Delete</a>\
+                                </div>\
+                            </div>\
+                        </td>\
+                    </tr>\
 
-                </tbody>`
+                </tbody>\`
             })
 
 
