@@ -30,11 +30,6 @@ app.use((req, res, next) => {
 app.use("/api/v1", postRouter)
 
 
-
-
-//     /static/vscode_windows.exe
-app.use("/static", express.static(path.join(__dirname, 'static')))
-
 app.use(express.static(path.join(__dirname, 'public')))
 
 const PORT = process.env.PORT || 5501;
